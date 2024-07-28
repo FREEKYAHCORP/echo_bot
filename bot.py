@@ -42,10 +42,25 @@ messages = [
     },
 ]
 
+import json
+
 intents = discord.Intents.default()
 intents.message_content = True
 
 discord_client = discord.Client(intents=intents)
+
+def save_messages_to_json(messages):
+    with open('chat_history.json', 'w') as f:
+        json.dump(messages, f)
+
+def load_messages_from_json():
+    try:
+        with open('chat_history.json', 'r') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return []
+
+messages = load_messages_from_json()
 
 @discord_client.event
 async def on_ready():
@@ -60,15 +75,22 @@ async def on_message(message):
         user_message = message.content.replace(f"@{discord_client.user.name} ", "").replace(f"<@{discord_client.user.id}> ", "")
         print(f"Message from: {message.author.display_name}")
         
-        messages.append({"role": "user", "content": f"{message.author.display_name}" + ":" + user_message})
+        new_message = {"role": "user", "content": f"{message.author.display_name}:{user_message}"}
+        messages.append(new_message)
+        save_messages_to_json(messages)
+        
+        # Get the last 5 messages for the API context
+        context_messages = messages[:1] + messages[-4:]  # System message + last 4 messages
         
         chat_completion = groq_client.chat.completions.create(
-            messages=messages,
-            model="llama3-70b-8192",
+            messages=context_messages,
+            model="llama-3.1-70b-versatileknm",
         )
         
         response = chat_completion.choices[0].message.content
-        messages.append({"role": "assistant", "content": response})
+        assistant_message = {"role": "assistant", "content": response}
+        messages.append(assistant_message)
+        save_messages_to_json(messages)
         
         await message.reply(response, mention_author=False)
 
