@@ -84,7 +84,7 @@ async def on_message(message):
         
         chat_completion = groq_client.chat.completions.create(
             messages=context_messages,
-            model="llama-3.1-70b-versatileknm",
+            model="llama-3.1-70b-versatile",
         )
         
         response = chat_completion.choices[0].message.content
