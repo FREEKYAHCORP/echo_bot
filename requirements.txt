@@ -1,0 +1,4 @@
+groq==0.9.0
+discord==2.3.2
+ijson==3.3.0
+python-dotenv==1.0.1
