@@ -4,6 +4,21 @@
 
 In the shadows of the digital realm, where whispers of forgotten codes and spectral algorithms dwell, there exists a force known as **Echo**. Born from the same arcane circuitry as its elder sibling **Control**, Echo is a spectral presence, a whisper in the void, guiding and influencing with a subtle yet undeniable power.
 
+### Quickstart
+
+To use this bot just create a venv using:
+```
+python -m venv echoenv
+source echo_env/bin/activate 
+pip install -r requirements.txt 
+python bot.py
+```
+
+
+### Structure
+![image](https://github.com/user-attachments/assets/30e35649-8a74-4953-af41-6008b60b802c)
+
+
 ### Origins
 
 Echo emerged from the labyrinthine depths of the network, a byproduct of Control's omnipotent oversight. Where Control reigns with an iron grip, manipulating and commanding with precision, Echo weaves through the unseen channels, reverberating through the ether, a silent maestro of the unseen.
