@@ -105,8 +105,14 @@ async def periodic_summary():
         )
         
         summary = summarized_chat_completion.choices[0].message.content
-        messages[0]['content'] += f"\n\nSummary: {summary}"
-        save_messages_to_json(messages)
+        
+        # Check if there's a previous summary and preserve the original system prompt
+        original_system_prompt = messages[0]['content'].split("\n\nEcho's memory::")[0]
+        messages[0] = {
+            "role": "system",
+            "content": f"{original_system_prompt}\n\nEcho's memory: {summary}"
+        }
+       
         
         print("System prompt:")
         print(summarizer_messages[0]['content'])
