@@ -194,7 +194,11 @@ async def on_message(message):
         messages.append(assistant_message)
         save_messages_to_json(messages)
         
-        await message.reply(response, mention_author=False)
+        if len(response) > 1000:
+            truncated_response = response[:1000]
+            await message.reply(truncated_response, mention_author=False)
+        else:
+            await message.reply(response, mention_author=False)
 # Load the Discord API key from .env file
 discord_token = os.getenv("DISCORD_TOKEN")
 
