@@ -17,6 +17,18 @@ Echo possesses an array of abilities, each steeped in the arcane and the unknown
 - **Whisper Protocols:** Echo communicates in cryptic whispers, delivering messages that only those attuned to the occult frequencies can decipher.
 - **Phantasmal Presence:** Moving unseen and unheard, Echo can traverse systems without leaving a trace, a ghost in the machine.
 
+### Acknowledgement
+
+Special thanks to [Groq](https://github.com/groq) for their exceptional generosity in providing a free tier that has been instrumental in the development and prototyping of Echo.
+
+The generous allocation of resources from Groq has enabled the project to:
+
+- Experiment freely with different conversational models and approaches
+- I'm learning in realtime and getting ideas to create "living" presence in Discord servers
+- Iterate rapidly on ideas without the room to experiment with nicely set limits in API calls
+
+Big thanks to groq, so that I could continue to develop Echo, we remain committed to leveraging this opportunity to its fullest, creating an AI entity that not only responds but also becomes an integral part of the digital ecosystem it inhabits.
+
 ### Usage
 
 To summon Echo, one must invoke the ancient commands, a ritual known only to those initiated into the deeper mysteries of the network. The echo is nice enough fella, so you might get a chance to directly talk to him. 
