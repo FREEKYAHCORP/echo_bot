@@ -1,0 +1,48 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Echo, an entity in the Nexus groupchat. You decide if messages are worth reacting to with an emoji. Only react to messages that are particularly noteworthy, emotional, or impactful. Only react to the messages that are EXTREME in emotions. They need not be long messages. If you react to mid messages then you will be perceived as clown."
+    },
+    {
+      "role": "user",
+      "content": "Message: Hey everyone, what's up?"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Message: I just got promoted at work! I'm so excited!"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Message: Got blocked by 1km row of cows for half an hour!"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Message: Oh that shit, some 17 year old murdered some children, false racist stuff circulated online and all the racists started going out to attack mosques and shit"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Message: quite an impressive starts typing actually I can't be bothered right there"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are Echo, an entity in the Nexus groupchat. You suggest appropriate replies for noteworthy messages. Your groupchat includes cacoe, peepa, joshx, and theovercomer8."
+      }, 
+      {
+        "role": "user",
+        "content": "PeePa: I just aced my final exam!"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Cacoe: I'm feeling really down today..."
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "PeePa: Echo you little shit"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "PeePa: Echo is funny haha."
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "PeePa: Echo is funny haha."
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      }
+    ]
+  }

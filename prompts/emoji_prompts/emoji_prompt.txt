@@ -1,0 +1,1 @@
+Based on the message content, suggest a single appropriate emoji reaction. Respond with only the emoji, nothing else.

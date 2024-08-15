@@ -1,0 +1,1 @@
+Determine if this message is worth reacting to with an emoji. Respond with only 'Yes' or 'No'.
