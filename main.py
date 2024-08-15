@@ -29,7 +29,7 @@ co = cohere.Client(
 )
 
 personas = [
-    Persona(groq_client, co, "jekyll", Persona.pick_system_prompt("jekyll"), 0.1, Persona.pick_chat_history("jekyll")),
+  #  Persona(groq_client, co, "jekyll", Persona.pick_system_prompt("jekyll"), 0.1, Persona.pick_chat_history("jekyll")),
 #    Persona(groq_client, co, "Hyde", Persona.pick_system_prompt("hyde"), 0.3),
     Persona(groq_client, co, "echo", Persona.pick_system_prompt("echo"), 0.3, Persona.pick_chat_history("echo")),
     # Add more personas here
@@ -133,8 +133,8 @@ async def on_message(message):
         else:
             # If no persona is active, activate the first one in the list
             if personas:
-                personas[1].is_active = True
-                response = await use_persona(personas[1], user_message)
+                personas[0].is_active = True
+                response = await use_persona(personas[0], user_message)
                 print(f"Persona response: {response}")
                 await send_response_in_chunks(message.channel, response)
             else:

@@ -11,7 +11,7 @@ To use this bot just create a venv using:
 python -m venv echoenv
 source echo_env/bin/activate 
 pip install -r requirements.txt 
-python bot.py
+python main.py
 ```
 
 

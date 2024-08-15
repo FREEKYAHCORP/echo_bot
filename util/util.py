@@ -36,11 +36,11 @@ async def send_response_in_chunks(channel, response):
         await channel.send(chunk)
 
 def load_prompt(prompt_name):
-    prompt_path = Path(f"/root/projects/echo_rework/prompts/emoji_prompts/{prompt_name}_prompt.txt")
+    prompt_path = Path(f"prompts/emoji_prompts/{prompt_name}_prompt.txt")
     with open(prompt_path, "r") as f:
         return f.read().strip()
 
 def load_context(context_name):
-    context_path = Path(f"/root/projects/echo_rework/prompts/emoji_prompts/{context_name}_context.json")
+    context_path = Path(f"prompts/emoji_prompts/{context_name}_context.json")
     with open(context_path, "r") as f:
         return json.load(f)

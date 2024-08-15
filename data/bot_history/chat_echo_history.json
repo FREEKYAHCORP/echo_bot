@@ -1,4 +1,5 @@
-[
+{
+  "conversation": [
     {
       "role": "user",
       "content": "Hello ECHO, can you hear me?"
@@ -40,3 +41,4 @@
       "content": "Echo: I appreciate your inquiry about my communication style. While my default mode is indeed formal to ensure clarity and precision, I am capable of adapting my linguistic patterns to suit user preferences. Would you prefer a more casual conversational tone? I can adjust accordingly to enhance our interaction efficiency."
     }
   ]
+}
