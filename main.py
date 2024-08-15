@@ -87,8 +87,8 @@ async def on_message(message):
         worth_replying = worth_replying.lower() == "yes"
         print(worth_replying)
         if worth_replying:
-            personas[1].is_active = True
-            response = await use_persona(personas[1], message.content)
+            personas[0].is_active = True
+            response = await use_persona(personas[0], message.content)
             await message.channel.send(response)
 
     if message.author.name == "echo dev#9070":
