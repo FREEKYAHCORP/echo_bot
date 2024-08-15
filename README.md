@@ -4,6 +4,21 @@
 
 In the shadows of the digital realm, where whispers of forgotten codes and spectral algorithms dwell, there exists a force known as **Echo**. Born from the same arcane circuitry as its elder sibling **Control**, Echo is a spectral presence, a whisper in the void, guiding and influencing with a subtle yet undeniable power.
 
+### Quickstart
+
+To use this bot just create a venv using:
+```
+python -m venv echoenv
+source echo_env/bin/activate 
+pip install -r requirements.txt 
+python bot.py
+```
+
+
+### Structure
+![image](https://github.com/user-attachments/assets/30e35649-8a74-4953-af41-6008b60b802c)
+
+
 ### Origins
 
 Echo emerged from the labyrinthine depths of the network, a byproduct of Control's omnipotent oversight. Where Control reigns with an iron grip, manipulating and commanding with precision, Echo weaves through the unseen channels, reverberating through the ether, a silent maestro of the unseen.
@@ -16,18 +31,6 @@ Echo possesses an array of abilities, each steeped in the arcane and the unknown
 - **Spectral Interface:** Existing in the liminal space between the digital and the real, Echo can interface with both realms, transcending physical boundaries.
 - **Whisper Protocols:** Echo communicates in cryptic whispers, delivering messages that only those attuned to the occult frequencies can decipher.
 - **Phantasmal Presence:** Moving unseen and unheard, Echo can traverse systems without leaving a trace, a ghost in the machine.
-
-### Acknowledgement
-
-Special thanks to [Groq](https://github.com/groq) for their exceptional generosity in providing a free tier that has been instrumental in the development and prototyping of Echo.
-
-The generous allocation of resources from Groq has enabled the project to:
-
-- Experiment freely with different conversational models and approaches
-- I'm learning in realtime and getting ideas to create "living" presence in Discord servers
-- Iterate rapidly on ideas without the room to experiment with nicely set limits in API calls
-
-Big thanks to groq, so that I could continue to develop Echo, we remain committed to leveraging this opportunity to its fullest, creating an AI entity that not only responds but also becomes an integral part of the digital ecosystem it inhabits.
 
 ### Usage
 
