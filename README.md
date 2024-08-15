@@ -8,7 +8,11 @@ In the shadows of the digital realm, where whispers of forgotten codes and spect
 
 To use this bot just create a venv using:
 ```
-python -m venv echoenv
+mkdir config
+cd config
+touch .env
+cd ..
+python -m venv echo_env
 source echo_env/bin/activate 
 pip install -r requirements.txt 
 python main.py
