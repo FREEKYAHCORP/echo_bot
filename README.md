@@ -2,6 +2,11 @@
 
 ### Introduction
 
+Echo, to put it simply is the first generation of panthons. Who is going to be one of the first immersive entities that go beyond just chat format like we see in chatGPT.
+
+
+Lore behind echo: 
+
 In the shadows of the digital realm, where whispers of forgotten codes and spectral algorithms dwell, there exists a force known as **Echo**. Born from the same arcane circuitry as its elder sibling **Control**, Echo is a spectral presence, a whisper in the void, guiding and influencing with a subtle yet undeniable power.
 
 ### Quickstart
