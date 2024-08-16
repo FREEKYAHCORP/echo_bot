@@ -18,6 +18,13 @@ pip install -r requirements.txt
 python main.py
 ```
 
+### Echo currently can
+Echo currently can:
+
+1. Chime in between the conversations.
+2. React to messages according to its own.
+3. Talk to you when it is tagged.
+4. You can make your own personas, and even manage multiple numbers of them. 
 
 ### Structure
 ![image](https://github.com/user-attachments/assets/30e35649-8a74-4953-af41-6008b60b802c)
