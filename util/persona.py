@@ -1,13 +1,17 @@
 import json
 import os
 from pathlib import Path
+from openai import OpenAI
 
 class Persona:
-    def __init__(self, groq_client, co_client, name, system_prompt, temperature, chat_history):
+    def __init__(self, openrouter_api_key, co_client, name, system_prompt, temperature, chat_history):
         self.name = name
         self.messages = []
         self.system_prompt = system_prompt
-        self.groq_client = groq_client
+        self.client = OpenAI(
+            api_key=openrouter_api_key,
+            base_url="https://openrouter.ai/api/v1",
+        )
         self.co_client = co_client
         self.temperature = temperature
         self.is_active = False
@@ -31,8 +35,8 @@ class Persona:
 
     async def use_persona(self, message):
         self.messages.append({"role": "user", "content": message})
-        response = self.groq_client.chat.completions.create(
-            model="llama-3.1-70b-versatile",
+        chat_completion = self.client.chat.completions.create(
+            model="nousresearch/hermes-3-llama-3.1-405b",
             messages=[
                 {"role": "system", "content": self.system_prompt},
                 *json.loads(self.chat_history)['conversation'][-10:],
@@ -40,10 +44,11 @@ class Persona:
             ],
             temperature=self.temperature,
         )
-        self.messages.append({"role": "assistant", "content": response.choices[0].message.content})
+        response_content = chat_completion.choices[0].message.content
+        self.messages.append({"role": "assistant", "content": response_content})
         self.chat_history_append({"role": "user", "content": message})
-        self.chat_history_append({"role": "assistant", "content": response.choices[0].message.content})
-        return response.choices[0].message.content
+        self.chat_history_append({"role": "assistant", "content": response_content})
+        return response_content
 
     @classmethod
     def pick_system_prompt(cls, name):

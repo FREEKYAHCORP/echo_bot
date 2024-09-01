@@ -23,8 +23,8 @@ def format_conversation(chat_history, limit=10):
 
 async def use_emoji_llm(client, messages, model, max_tokens):
     response = client.chat.completions.create(
-        messages=messages,
         model=model,
+        messages=messages,
         max_tokens=max_tokens
     )
     return response.choices[0].message.content.strip()
